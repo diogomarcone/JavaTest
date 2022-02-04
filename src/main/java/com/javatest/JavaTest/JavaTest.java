@@ -1,13 +1,13 @@
-package com.javatest.SigaBemvalorFrete;
+package com.javatest.JavaTest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SigaBemValorFreteApplication {
+public class JavaTest {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SigaBemValorFreteApplication.class, args);
+		SpringApplication.run(JavaTest.class, args);
 	}
 
 }
