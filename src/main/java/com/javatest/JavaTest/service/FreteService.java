@@ -25,9 +25,6 @@ public class FreteService {
     public Frete getFreteById(Long id){
         return freteRepository.findById(id).orElse(null);
     }
-    public Frete getFreteByName(String nomeDestinatario){
-        return freteRepository.findByName(nomeDestinatario);
-    }
 
     public String deleteFrete(Long id){
         freteRepository.deleteById(id);
@@ -37,6 +34,7 @@ public class FreteService {
     public Frete updateFrete(Frete frete){
         Frete existingFrete = freteRepository.findById(frete.getId()).orElse(null);
         existingFrete.setNomeDestinatario((frete.getNomeDestinatario()));
+        existingFrete.setPeso((frete.getPeso()));
         return freteRepository.save(existingFrete);
     }
 }

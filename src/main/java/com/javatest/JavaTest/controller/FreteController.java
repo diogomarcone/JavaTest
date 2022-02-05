@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("api/")
 public class FreteController {
 
     @Autowired
@@ -28,10 +29,6 @@ public class FreteController {
     @GetMapping("/frete/{id}")
     public Frete findFreteById(@PathVariable Long id){
         return service. getFreteById(id);
-    }
-    @GetMapping("/frete/{name}")
-    public Frete findFreteByName(@PathVariable String nomeDestinatario){
-        return service. getFreteByName(nomeDestinatario);
     }
     @PutMapping("/update")
     public Frete updateFrete(@RequestBody Frete frete){

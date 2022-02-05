@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FreteRepository extends JpaRepository<Frete, Long> {
-    Frete findByName(String nomeDestinatario);
 }
